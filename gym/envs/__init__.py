@@ -137,6 +137,16 @@ register(
 )
 
 register(
+    id='KellyCoinflip-v0',
+    entry_point='gym.envs.toy_text:KellyCoinflipEnv',
+    reward_threshold=246.61,
+)
+register(
+    id='KellyCoinflipGeneralized-v0',
+    entry_point='gym.envs.toy_text:KellyCoinflipGeneralizedEnv',
+)
+
+register(
     id='FrozenLake-v0',
     entry_point='gym.envs.toy_text:FrozenLakeEnv',
     kwargs={'map_name' : '4x4'},
@@ -193,6 +203,27 @@ register(
     entry_point='gym.envs.mujoco:ReacherEnv',
     max_episode_steps=50,
     reward_threshold=-3.75,
+)
+
+register(
+    id='Pusher-v0',
+    entry_point='gym.envs.mujoco:PusherEnv',
+    max_episode_steps=100,
+    reward_threshold=0.0,
+)
+
+register(
+    id='Thrower-v0',
+    entry_point='gym.envs.mujoco:ThrowerEnv',
+    max_episode_steps=100,
+    reward_threshold=0.0,
+)
+
+register(
+    id='Striker-v0',
+    entry_point='gym.envs.mujoco:StrikerEnv',
+    max_episode_steps=100,
+    reward_threshold=0.0,
 )
 
 register(
@@ -263,7 +294,7 @@ for game in ['air_raid', 'alien', 'amidar', 'assault', 'asterix', 'asteroids', '
     'bank_heist', 'battle_zone', 'beam_rider', 'berzerk', 'bowling', 'boxing', 'breakout', 'carnival',
     'centipede', 'chopper_command', 'crazy_climber', 'demon_attack', 'double_dunk',
     'elevator_action', 'enduro', 'fishing_derby', 'freeway', 'frostbite', 'gopher', 'gravitar',
-    'ice_hockey', 'jamesbond', 'journey_escape', 'kangaroo', 'krull', 'kung_fu_master',
+    'hero', 'ice_hockey', 'jamesbond', 'journey_escape', 'kangaroo', 'krull', 'kung_fu_master',
     'montezuma_revenge', 'ms_pacman', 'name_this_game', 'phoenix', 'pitfall', 'pong', 'pooyan',
     'private_eye', 'qbert', 'riverraid', 'road_runner', 'robotank', 'seaquest', 'skiing',
     'solaris', 'space_invaders', 'star_gunner', 'tennis', 'time_pilot', 'tutankham', 'up_n_down',
